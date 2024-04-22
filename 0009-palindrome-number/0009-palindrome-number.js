@@ -7,10 +7,9 @@ var isPalindrome = function(x) {
 
     let rev = 0
     let temp = x
-
-    while(x > 0){
-        rev = rev * 10 + x % 10
-        x = Math.floor(x / 10)
+    while(temp > 0){
+        rev = rev * 10 + temp % 10
+        temp = Math.floor(temp / 10)
     }
-    return temp == rev 
+    return x == rev 
 }
