@@ -4,10 +4,6 @@
  * @return {boolean}
  */
 var isMatch = function(s, p) {
-
-    try {
-        return new RegExp("^" + p + "$").test(s);
-    } catch (error) {
-        return isMatch(s,p.substring(1))
-    }
+    p= p.replaceAll('**', '');
+    return RegExp("^" + p + "$").test(s);
 };
