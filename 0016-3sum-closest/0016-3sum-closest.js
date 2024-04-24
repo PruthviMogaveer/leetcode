@@ -19,7 +19,7 @@ var threeSumClosest = function(nums, target) {
             }
 
             if (sum === target) {
-                return target; // Found exact match, no need to continue searching
+                return target;
             } else if (sum < target) {
                 mid++;
             } else {
