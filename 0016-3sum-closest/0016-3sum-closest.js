@@ -5,7 +5,7 @@
  */
 var threeSumClosest = function(nums, target) {
     nums.sort((a, b) => a - b);
-    let closestSum = Infinity;
+    let closestSum = nums[0]+nums[1]+nums[2]
 
     for (let start = 0; start < nums.length - 2; start++) {
         let mid = start + 1;
