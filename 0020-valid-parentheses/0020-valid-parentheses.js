@@ -3,7 +3,6 @@
  * @return {boolean}
  */
 var isValid = function (s) {
-    if(s.length == 1) return false
     let brackets = {
         "(": ")",
         "{": "}",
@@ -11,19 +10,17 @@ var isValid = function (s) {
     }
     let stack = []
     for (char of s) {
-        if (char == "(" || char=="{" || char=="[") {
+        if (char == "(" || char == "{" || char == "[") {
             stack.push(char)
         }
         else {
             if (!stack) return false
-            else {
-                let i = stack.pop()
-                if (brackets[i] == char)
-                    continue
-                else
-                    return false
-            }
+            let i = stack.pop()
+            if (brackets[i] == char)
+                continue
+            else
+                return false
         }
     }
-    return stack.length == 0?true:false
+    return stack.length == 0
 };
