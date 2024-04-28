@@ -22,7 +22,6 @@ var generateParenthesis = function(n) {
             backtrack(openB, closeB+1)
             stack.pop()
         }
-
     }
     backtrack(0,0)
     return res
