@@ -10,7 +10,6 @@
  * @return {ListNode}
  */
 var mergeKLists = function(lists) {
-    const compareNodes = (a, b) => a.val - b.val;
 
     const pq = [];
 
@@ -18,7 +17,7 @@ var mergeKLists = function(lists) {
         if (list) pq.push(list);
     }
 
-    pq.sort(compareNodes);
+    pq.sort((a, b) => a.val - b.val);
 
     const dummy = new ListNode(-1);
     let current = dummy;
@@ -30,7 +29,7 @@ var mergeKLists = function(lists) {
 
         if (smallest.next) pq.push(smallest.next);
 
-        pq.sort(compareNodes);
+        pq.sort((a, b) => a.val - b.val);
     }
 
     return dummy.next;
