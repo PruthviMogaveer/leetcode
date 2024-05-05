@@ -12,7 +12,7 @@ var searchRange = function(nums, target) {
                 break;
             }
         }
-        return [start,end]
+        return [start, end]
     }
     else
         return [-1,-1]
